@@ -2,13 +2,13 @@ import streamlit as st
 from PIL import Image # Biblioteca para carregar imagens
 
 # Configuração da página (opcional, mas legal)
-st.set_page_config(page_title="Para Meu Amor", page_icon="💖")
+st.set_page_config(page_title="Para Meu Amor, Mari", page_icon="💖")
 
 # --- O MENU LATERAL ---
 # O 'st.sidebar' cria um menu na lateral esquerda
-st.sidebar.title("Nosso Cantinho 💖")
+st.sidebar.title("Te amo 💖")
 pagina_escolhida = st.sidebar.selectbox(
-    "Escolha uma página:",
+    "Aqui é um menu para você navegar:",
     ["Início", "Nossas Memórias", "Uma Carta para Você"]
 )
 
@@ -16,13 +16,13 @@ pagina_escolhida = st.sidebar.selectbox(
 
 if pagina_escolhida == "Início":
     # Página Inicial
-    st.title("Bem-vinda, Meu Amor!")
-    st.write("Este é um presentinho que fiz para você.")
-    st.write("Espero que goste de relembrar nossos momentos.")
+    st.title("Oi, Meu Amor!")
+    st.write("Esse é um pequeno presente de 1 ano que fiz para você.")
+    st.write("Espero que goste...")
     
     # Tenta carregar uma foto de capa
     try:
-        imagem_capa = Image.open("foto_capa.jpg") # Coloque uma foto principal aqui
+        imagem_capa = Image.open("fotos/eu.png") # Coloque uma foto principal aqui
         st.image(imagem_capa, caption="Nós <3")
     except FileNotFoundError:
         st.warning("Coloque uma 'foto_capa.jpg' na pasta do projeto.")
